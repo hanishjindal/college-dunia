@@ -48,7 +48,7 @@ function BackgroundChanger() {
       >
       </div>
 
-      <div className='absolute top-0 left-0 w-full h-full flex flex-col gap-6 justify-center items-center mt-2'>
+      <div className='absolute top-0 left-0 w-full h-full flex flex-col gap-6 justify-center items-center mt-4'>
         <div className='text-[40px] text-white font-semibold max-w-[78%] text-center'>
           {course ? 'Search ' : 'Find Over '}
           {
