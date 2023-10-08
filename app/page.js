@@ -4,12 +4,14 @@ import LowerHeader from '@/components/LowerHeader';
 import React, { useState, useEffect } from 'react';
 import { CAROUSEL_DATA, TYPING_LIST } from '@/components/config'
 import { TypeAnimation } from 'react-type-animation';
+import SearchModal from '@/components/SearchModal';
 
 function BackgroundChanger() {
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
   const [city, setCity] = useState('India')
   const [course, setCourse] = useState(null)
   const [courseModal, setCourseModal] = useState(null)
+  const [searchModal, setSearchModal] = useState(false)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -71,6 +73,7 @@ function BackgroundChanger() {
         </div>
         <button
           className='relative w-[64%] shadow-md rounded-[4px] h-14 outline-none overflow-hidden bg-white flex items-center text-sm text-[#adb5bd] px-2 gap-1 cursor-pointer after:content-["Search"] after:bg-theme-orange after:h-full after:flex after:items-center after:justify-center after:text-white after:absolute after:right-0 after:w-24 after:text-base'
+          onClick={() => setSearchModal(true)}
         >
           <img className='ml-[6px] opacity-50 w-6' src="images/search.svg" alt="" />
           <span>
@@ -98,9 +101,16 @@ function BackgroundChanger() {
           handleCloseCourseModal={handleCloseCourseModal}
           city={city}
           handleCitySelect={handleCitySelect}
+          setSearchModal={setSearchModal}
         />
         <LowerHeader />
       </div>
+      {
+        searchModal &&
+        <SearchModal
+          setSearchModal={setSearchModal}
+        />
+      }
     </div>
   );
 }

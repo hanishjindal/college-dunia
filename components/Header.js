@@ -7,7 +7,8 @@ function Header({
     course,
     handleCloseCourseModal,
     city,
-    handleCitySelect
+    handleCitySelect,
+    setSearchModal
 }) {
     return (
         <div className='w-full p-3 flex items-center gap-4 bg-black-opacity-20 px-7' >
@@ -55,6 +56,7 @@ function Header({
             </div>
             <button
                 className='w-[47%] rounded-md h-12 bg-white flex items-center text-sm text-[#adb5bd] px-2 gap-1 cursor-pointer hover:text-[#666]'
+                onClick={() => setSearchModal(true)}
             >
                 <img className='ml-[14px]' src="images/search.svg" alt="" />
                 <span>Search for Colleges, Exams, Courses and More..</span>
