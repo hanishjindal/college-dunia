@@ -209,3 +209,32 @@ export const COURSE_DATA = [
         ]
     },
 ]
+
+export const CITY_STATE = [
+    {
+        name: 'Popular Cities',
+        list: [
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/New%20Delhi.svg?mode=stretch',
+                name: 'New Delhi'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Gurgaon.svg?mode=stretch',
+                name: 'Gurgaon'
+            },
+        ]
+    },
+    {
+        name: 'Popular States',
+        list: [
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Maharashtra.svg?mode=stretch',
+                name: 'Maharastra'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Tamil%20Nadu.svg?mode=stretch',
+                name: 'Tamil Nadu'
+            },
+        ]
+    },
+]

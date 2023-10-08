@@ -21,14 +21,21 @@ function BackgroundChanger() {
 
   const handleCourseSelect = (stream) => {
     setCourse(stream)
+    setCourseModal('city')
+  }
+
+  const handleCloseCourseModal = () => {
+    setCourseModal(null)
+    if (course === null || city === 'India') {
+      setCourse(null)
+      setCity('India')
+    }
   }
 
   return (
     <div
       className='h-[70vh] bg-gradient-to-b from-black via-black to-gray-600 relative'
-      onClick={() => {
-        setCourseModal(null)
-      }}
+      onClick={handleCloseCourseModal}
     >
       <div
         className="bg-cover bg-center h-full z-40 opacity-30 w-full"
@@ -72,6 +79,8 @@ function BackgroundChanger() {
           setCourseModal={setCourseModal}
           handleCourseSelect={handleCourseSelect}
           course={course}
+          handleCloseCourseModal={handleCloseCourseModal}
+          city={city}
         />
         <LowerHeader />
       </div>

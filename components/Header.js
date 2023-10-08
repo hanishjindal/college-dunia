@@ -4,7 +4,9 @@ function Header({
     courseModal,
     setCourseModal,
     handleCourseSelect,
-    course
+    course,
+    handleCloseCourseModal,
+    city
 }) {
     return (
         <div className='w-full p-3 flex items-center gap-4 bg-black-opacity-20 px-7' >
@@ -35,9 +37,12 @@ function Header({
                 {
                     courseModal &&
                     <CourseModal
+                        courseModal={courseModal}
                         setCourseModal={setCourseModal}
                         handleCourseSelect={handleCourseSelect}
                         course={course}
+                        handleCloseCourseModal={handleCloseCourseModal}
+                        city={city}
                     />
                 }
             </div>
