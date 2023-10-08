@@ -6,14 +6,15 @@ function Header({
     handleCourseSelect,
     course,
     handleCloseCourseModal,
-    city
+    city,
+    handleCitySelect
 }) {
     return (
         <div className='w-full p-3 flex items-center gap-4 bg-black-opacity-20 px-7' >
             <a href='#' className='border-r border-[rgba(232,232,232,0.2)] pr-4 cursor-pointer'>
                 <img src="images/logo.svg" alt="logo" className='w-[187px]' />
             </a>
-            <div className='flex flex-col gap-1 col-span-1 font-light relative'>
+            <div className='flex flex-col gap-1 col-span-1 font-light relative items-start'>
                 <p className='text-theme-orange text-xs flex justify-center whitespace-nowrap'>
                     <img className='w-4' src="images/graduate.svg" alt="" />
                     <span className='flex '> &nbsp;Select Goal &</span>
@@ -29,10 +30,15 @@ function Header({
                         }
                     }
                 >
-                    <div className='bg-transparent text-white h-full text-[13px]'>
-                        Select Goal
+                    <div className='bg-transparent text-white h-full text-[13px] whitespace-nowrap'>
+                        {
+                            (course && city !== 'India') ?
+                                `${course}, ${city}`
+                                :
+                                'Select Goal'
+                        }
                     </div>
-                    <img className='w-5' src="images/down-arrow.svg" alt="" />
+                    <img className='w-4' src="images/down-arrow.svg" alt="" />
                 </div>
                 {
                     courseModal &&
@@ -43,6 +49,7 @@ function Header({
                         course={course}
                         handleCloseCourseModal={handleCloseCourseModal}
                         city={city}
+                        handleCitySelect={handleCitySelect}
                     />
                 }
             </div>

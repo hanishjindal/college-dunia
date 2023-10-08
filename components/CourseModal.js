@@ -7,7 +7,8 @@ const CourseModal = ({
     handleCourseSelect,
     course,
     city,
-    handleCloseCourseModal
+    handleCloseCourseModal,
+    handleCitySelect
 }) => {
     const [blueHover, setBlueHover] = useState(Array(COURSE_DATA.length).fill(null));
 
@@ -118,15 +119,21 @@ const CourseModal = ({
                                 :
                                 CITY_STATE.map((type, index) => {
                                     return (
-                                        <div className='w-full flex flex-col gap-4 mb-4' key={index}>
+                                        <div className='w-full flex flex-col gap-4 mb-7' key={index}>
                                             <span className='flex text-sm text-gray-900 font-medium'>{type.name}</span>
-                                            <div className='w-full grid grid-cols-4 gap-2'>
+                                            <div className='w-4/5 grid grid-cols-4 gap-4'>
                                                 {
                                                     type.list.map((city, idx) => {
                                                         return (
-                                                            <div key={idx} className='flex flex-col justify-center items-center'>
+                                                            <div
+                                                                key={idx}
+                                                                className={`flex flex-col justify-center items-center border rounded w-32 h-20 gap-1 cursor-pointer ${idx === blueHover[index] ? 'bg-custom-blue border-custom-blue' : 'border-gray-200'}`}
+                                                                onMouseEnter={() => handleMouseEnter(index, idx)}
+                                                                onMouseLeave={handleMouseLeave}
+                                                                onClick={() => handleCitySelect(city.name)}
+                                                            >
                                                                 <img className='w-12' src={city.img} alt="" />
-                                                                <span>{city.name}</span>
+                                                                <span className={`text-[13px] font-medium ${idx === blueHover[index] ? 'text-custom-blue' : 'text-gray-400'}`}>{city.name}</span>
                                                             </div>
                                                         )
                                                     })

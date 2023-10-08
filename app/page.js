@@ -32,6 +32,11 @@ function BackgroundChanger() {
     }
   }
 
+  const handleCitySelect = (ct) => {
+    setCity(ct)
+    setCourseModal(null)
+  }
+
   return (
     <div
       className='h-[70vh] bg-gradient-to-b from-black via-black to-gray-600 relative'
@@ -43,23 +48,34 @@ function BackgroundChanger() {
       >
       </div>
 
-      <div className='absolute top-0 left-0 w-full h-full flex flex-col gap-6 justify-center items-center mt-10'>
-        <span className='text-[40px] text-white font-semibold'>
+      <div className='absolute top-0 left-0 w-full h-full flex flex-col gap-6 justify-center items-center mt-2'>
+        <div className='text-[40px] text-white font-semibold max-w-[78%] text-center'>
           {course ? 'Search ' : 'Find Over '}
-          <TypeAnimation
-            sequence={TYPING_LIST}
-            wrapper="span"
-            speed={50}
-            cursor={false}
-            repeat={Infinity}
-          />
-          &nbsp;in {city}
-        </span>
+          {
+            course ?
+              'Diploma in Engineering Colleges, Courses and Exams '
+              :
+              <TypeAnimation
+                sequence={TYPING_LIST}
+                wrapper="span"
+                speed={50}
+                cursor={false}
+                repeat={Infinity}
+              />
+          }
+          {
+            !course &&
+            <span>&nbsp;</span>
+          }
+          in {city}
+        </div>
         <button
           className='relative w-[64%] shadow-md rounded-[4px] h-14 outline-none overflow-hidden bg-white flex items-center text-sm text-[#adb5bd] px-2 gap-1 cursor-pointer after:content-["Search"] after:bg-theme-orange after:h-full after:flex after:items-center after:justify-center after:text-white after:absolute after:right-0 after:w-24 after:text-base'
         >
           <img className='ml-[6px] opacity-50 w-6' src="images/search.svg" alt="" />
-          <span>Search for colleges, exams, courses and more..</span>
+          <span>
+            Search for colleges, exams, courses and more..
+          </span>
         </button>
         <div className='w-[64%] flex justify-end'>
           <button className='bg-theme-orange text-white text-sm h-9 rounded outline-none px-[10px] font-bold w-48 hover:opacity-80'>Need Counselling</button>
@@ -81,6 +97,7 @@ function BackgroundChanger() {
           course={course}
           handleCloseCourseModal={handleCloseCourseModal}
           city={city}
+          handleCitySelect={handleCitySelect}
         />
         <LowerHeader />
       </div>

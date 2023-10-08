@@ -222,6 +222,70 @@ export const CITY_STATE = [
                 img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Gurgaon.svg?mode=stretch',
                 name: 'Gurgaon'
             },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Noida.svg?mode=stretch',
+                name: 'Noida'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Mumbai.svg?mode=stretch',
+                name: 'Mumbai'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Chennai.svg?mode=stretch',
+                name: 'Chennai'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Kolkata.svg?mode=stretch',
+                name: 'Kolkata'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Hyderabad.svg?mode=stretch',
+                name: 'Hyderabad'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Bangalore.svg?mode=stretch',
+                name: 'Banglore'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Pune.svg?mode=stretch',
+                name: 'Pune'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Ahmedabad.svg?mode=stretch',
+                name: 'Ahmedabad'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Lucknow.svg?mode=stretch',
+                name: 'Lucknow'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Coimbatore.svg?mode=stretch',
+                name: 'Coimbatore'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Jaipur.svg?mode=stretch',
+                name: 'Jaipur'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Bhopal.svg?mode=stretch',
+                name: 'Bhopal'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Nagpur.svg?mode=stretch',
+                name: 'Nagpur'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Bhubaneswar.svg?mode=stretch',
+                name: 'Bhubneswar'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Indore.svg?mode=stretch',
+                name: 'Indore'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Dehradun.svg?mode=stretch',
+                name: 'Dehradun'
+            },
         ]
     },
     {
@@ -234,6 +298,38 @@ export const CITY_STATE = [
             {
                 img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Tamil%20Nadu.svg?mode=stretch',
                 name: 'Tamil Nadu'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Karnataka.svg?mode=stretch',
+                name: 'Karnataka'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Uttar%20Pradesh.svg?mode=stretch',
+                name: 'Uttar Pradesh'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Gujarat.svg?mode=stretch',
+                name: 'Gujarat'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Andhra%20Pradesh.svg?mode=stretch',
+                name: 'Andhra Pradesh'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Rajasthan.svg?mode=stretch',
+                name: 'Rajasthan'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Kerala.svg?mode=stretch',
+                name: 'Kerala'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Telangana.svg?mode=stretch',
+                name: 'Telangana'
+            },
+            {
+                img: 'https://images.collegedunia.com/public/asset/icons/city-state-icons/Madhya%20Pradesh.svg?mode=stretch',
+                name: 'Madhya Pradesh'
             },
         ]
     },
