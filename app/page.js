@@ -55,7 +55,7 @@ function BackgroundChanger() {
           {course ? 'Search ' : 'Find Over '}
           {
             course ?
-              'Diploma in Engineering Colleges, Courses and Exams '
+              `${course} Colleges, Courses and Exams `
               :
               <TypeAnimation
                 sequence={TYPING_LIST}
