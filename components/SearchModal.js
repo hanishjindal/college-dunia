@@ -16,11 +16,11 @@ const SearchModal = ({ setSearchModal }) => {
                     <span className='text-2xl font-medium text-theme-orange'>TRENDING SEARCHES</span>
                     <ul className='list-disc flex flex-col gap-2 font-medium'>
                         <li>Upcoming Exams</li>
-                        <li>"IIT" in Colleges</li>
-                        <li>"CAT" in Exams</li>
-                        <li>"CAT Cutoff" in News</li>
-                        <li>"MBA Colleges" in Delhi/NCR</li>
-                        <li>"MCA Colleges" in Delhi/NCR</li>
+                        <li>&quot;IIT&quot; in Colleges</li>
+                        <li>&quot;CAT&quot; in Exams</li>
+                        <li>&quot;CAT Cutoff&quot; in News</li>
+                        <li>&quot;MBA Colleges&quot; in Delhi/NCR</li>
+                        <li>&quot;MCA Colleges&quot; in Delhi/NCR</li>
                     </ul>
                 </div>
             </div>
