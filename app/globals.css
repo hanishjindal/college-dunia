@@ -7,3 +7,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/*
+Different arrow positioning
+*/
+.arrow-top:before {
+  left: calc(14% - 10px);
+  top: -8px;
+}
+
+.arrow-right:before {
+  top: calc(14% - 10px);
+  right: -8px;
+}
+
+.arrow-bottom:before {
+  left: calc(14% - 10px);
+  bottom: -8px;
+}
+
+.arrow-left:before {
+  top: calc(14% - 10px);
+  left: -8px;
+}

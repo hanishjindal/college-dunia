@@ -1,24 +1,45 @@
 import React from 'react'
-function Header() {
+import CourseModal from './CourseModal'
+function Header({
+    courseModal,
+    setCourseModal,
+    handleCourseSelect,
+    course
+}) {
     return (
         <div className='w-full p-3 flex items-center gap-4 bg-black-opacity-20 px-7' >
             <a href='#' className='border-r border-[rgba(232,232,232,0.2)] pr-4 cursor-pointer'>
                 <img src="images/logo.svg" alt="logo" className='w-[187px]' />
             </a>
-            {/* <span className='text-[rgba(232,232,232,0.2)] '>|</span> */}
-            <div className='flex flex-col gap-1 col-span-1  font-light'>
+            <div className='flex flex-col gap-1 col-span-1  font-light relative'>
                 <p className='text-theme-orange text-xs flex'>
                     <img className='w-4' src="images/graduate.svg" alt="" />
                     &nbsp;Select Goal &
                     <img className='w-4' src="images/location.svg" alt="" />
                     City
                 </p>
-                <div className='min-w-[100px] relative flex cursor-pointer'>
+                <div
+                    className='min-w-[100px] relative flex cursor-pointer'
+                    onClick={
+                        (e) => {
+                            e.stopPropagation()
+                            setCourseModal('course')
+                        }
+                    }
+                >
                     <div className='bg-transparent text-white h-full text-[13px]'>
                         Select Goal
                     </div>
                     <img className='w-5' src="images/down-arrow.svg" alt="" />
                 </div>
+                {
+                    courseModal &&
+                    <CourseModal
+                        setCourseModal={setCourseModal}
+                        handleCourseSelect={handleCourseSelect}
+                        course={course}
+                    />
+                }
             </div>
             <button
                 className='w-[47%] rounded-md h-12 bg-white flex items-center text-sm text-[#adb5bd] px-2 gap-1 cursor-pointer hover:text-[#666]'
@@ -44,6 +65,10 @@ function Header() {
                 <img src="images/hamburger-menu.svg" alt="" />
                 <img src="images/user.svg" alt="" />
             </div>
+            {
+                courseModal &&
+                <div className='w-full h-screen absolute top-0 left-0 bg-black opacity-20 z-[995]'></div>
+            }
         </div>
     )
 }

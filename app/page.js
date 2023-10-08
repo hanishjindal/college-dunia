@@ -9,6 +9,7 @@ function BackgroundChanger() {
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
   const [city, setCity] = useState('India')
   const [course, setCourse] = useState(null)
+  const [courseModal, setCourseModal] = useState(null)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -18,8 +19,17 @@ function BackgroundChanger() {
     return () => clearInterval(timer);
   }, [currentBgIndex]);
 
+  const handleCourseSelect = (stream) => {
+    setCourse(stream)
+  }
+
   return (
-    <div className='h-[70vh] bg-gradient-to-b from-black via-black to-gray-600 relative'>
+    <div
+      className='h-[70vh] bg-gradient-to-b from-black via-black to-gray-600 relative'
+      onClick={() => {
+        setCourseModal(null)
+      }}
+    >
       <div
         className="bg-cover bg-center h-full z-40 opacity-30 w-full"
         style={{ backgroundImage: `url(${CAROUSEL_DATA[currentBgIndex].link})` }}
@@ -39,7 +49,7 @@ function BackgroundChanger() {
           &nbsp;in {city}
         </span>
         <button
-          className='relative w-[64%] shadow-md rounded-[4px] h-14 overflow-hidden bg-white flex items-center text-sm text-[#adb5bd] px-2 gap-1 cursor-pointer after:content-["Search"] after:bg-theme-orange after:h-full after:flex after:items-center after:justify-center after:text-white after:absolute after:right-0 after:w-24 after:text-base'
+          className='relative w-[64%] shadow-md rounded-[4px] h-14 outline-none overflow-hidden bg-white flex items-center text-sm text-[#adb5bd] px-2 gap-1 cursor-pointer after:content-["Search"] after:bg-theme-orange after:h-full after:flex after:items-center after:justify-center after:text-white after:absolute after:right-0 after:w-24 after:text-base'
         >
           <img className='ml-[6px] opacity-50 w-6' src="images/search.svg" alt="" />
           <span>Search for colleges, exams, courses and more..</span>
@@ -57,7 +67,12 @@ function BackgroundChanger() {
       </div>
 
       <div className='fixed top-0 left-0 w-full'>
-        <Header />
+        <Header
+          courseModal={courseModal}
+          setCourseModal={setCourseModal}
+          handleCourseSelect={handleCourseSelect}
+          course={course}
+        />
         <LowerHeader />
       </div>
     </div>

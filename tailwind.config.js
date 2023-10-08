@@ -17,14 +17,19 @@ module.exports = {
         'black-opacity-20': 'rgba(0,0,0,0.2)',
         'black-opacity-30': 'rgba(0,0,0,0.3)',
         'black-opacity-40': 'rgba(0,0,0,0.4)',
-        'theme-orange': '#ff7900'
+        'custom-gray-2': 'rgb(250, 250, 250)',
+        'theme-orange': '#ff7900',
+        'custom-blue': 'rgb(236, 249, 255)',
       },
       textColor: {
-        'theme-orange': '#ff7900'
+        'theme-orange': '#ff7900',
+        'custom-gray': 'rgb(173, 181, 189)',
+        'custom-blue': 'rgb(19, 162, 228)',
       },
       borderColor: {
         'gray-opacity-20': 'rgba(232,232,232,0.2)',
-        'theme-orange': '#ff7900'
+        'theme-orange': '#ff7900',
+        'custom-blue': 'rgb(19, 162, 228)',
       }
     },
   },
