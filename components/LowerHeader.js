@@ -7,7 +7,7 @@ const LowerHeader = () => {
         <div className='w-full flex items-center justify-between gap-4 bg-black-opacity-10 px-12'>
             <div className='flex gap-5'>
                 <span
-                    className='text-white py-2 hover:text-theme-orange text-xs flex items-center gap-1 cursor-pointer hover:border-b border-theme-orange'
+                    className='text-white py-2 hover:pb-[7px] hover:text-theme-orange text-xs flex items-center gap-1 cursor-pointer hover:border-b border-theme-orange'
                     onMouseEnter={() => setLogoHover(true)}
                     onMouseLeave={() => setLogoHover(false)}
                 >
@@ -17,7 +17,7 @@ const LowerHeader = () => {
                 {
                     COURSES_LIST.map((li, idx) => {
                         return (
-                            <span key={idx} className='text-white py-2 hover:text-theme-orange text-xs flex items-center gap-1 cursor-pointer hover:border-b border-theme-orange'>
+                            <span key={idx} className='text-white py-2 hover:pb-[7px] hover:text-theme-orange text-xs flex items-center gap-1 cursor-pointer hover:border-b border-theme-orange'>
                                 {li}
                             </span>
                         )

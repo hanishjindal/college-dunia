@@ -13,10 +13,10 @@ function Header({
             <a href='#' className='border-r border-[rgba(232,232,232,0.2)] pr-4 cursor-pointer'>
                 <img src="images/logo.svg" alt="logo" className='w-[187px]' />
             </a>
-            <div className='flex flex-col gap-1 col-span-1  font-light relative'>
-                <p className='text-theme-orange text-xs flex'>
+            <div className='flex flex-col gap-1 col-span-1 font-light relative'>
+                <p className='text-theme-orange text-xs flex justify-center whitespace-nowrap'>
                     <img className='w-4' src="images/graduate.svg" alt="" />
-                    &nbsp;Select Goal &
+                    <span className='flex '> &nbsp;Select Goal &</span>
                     <img className='w-4' src="images/location.svg" alt="" />
                     City
                 </p>
@@ -55,7 +55,7 @@ function Header({
             <div className='flex gap-2 border-r border-[rgba(232,232,232,0.2)] pr-4 cursor-pointer'>
                 <img src="images/review.svg" alt="" />
                 <div className='flex flex-col text-white gap-1'>
-                    <span className='text-sm'>Write a Review</span>
+                    <span className='text-sm whitespace-nowrap'>Write a Review</span>
                     <span className='text-[10px] whitespace-nowrap bg-theme-orange p-[1px] px-1 rounded-[2px] flex justify-center items-center w-fit'>Get Upto ₹500*</span>
                 </div>
             </div>
